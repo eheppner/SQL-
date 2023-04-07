@@ -1,0 +1,38 @@
+CREATE TABLE craft_store (id INTEGER PRIMARY KEY, name TEXT, category TEXT, price NUMERIC, inventory INTEGER, rating INTEGER); 
+
+INSERT INTO craft_store VALUES (1, "paint", "art supplies", 10.99, 20, 4);
+
+INSERT INTO craft_store VALUES (2, "markers", "art supplies", 5.99, 35, 5); 
+
+INSERT INTO craft_store VALUES (3, "yarn", "yarn and fabrics", 16.99, 50, 3); 
+
+INSERT INTO craft_store VALUES (4, "crochet needles", "yarn and fabrics", 19.99, 50, 4);
+
+INSERT INTO craft_store VALUES (5, "paint brush", "art supplies", 18.99, 70, 5);
+
+INSERT INTO craft_store VALUES (6, "fabric", "yarn and fabrics", 23.99, 65, 3); 
+
+INSERT INTO craft_store VALUES (7, "canvas", "art supplies", 29.99, 35, 5); 
+
+INSERT INTO craft_store VALUES (8,"sewing machine", "sewing shop", 65.99, 10, 5); 
+
+INSERT INTO craft_store VALUES (9, "thread", "sewing shop", 5.99, 60, 5); 
+
+INSERT INTO craft_store VALUES (10, "beads", "beads and jewlery", 3.99, 100, 5); 
+
+INSERT INTO craft_store VALUES (11, "crystals", "beads and jewlery", 2.99, 100, 5); 
+
+INSERT INTO craft_store VALUES (12, "charms", "beads and jewlery", 2.99, 100, 5); 
+
+INSERT INTO craft_store VALUES (13, "scissors", "office supplies", 6.99, 50, 4); 
+
+INSERT INTO craft_store VALUES (14, "pens", "office supplies", 5.99, 80, 4); 
+
+INSERT INTO craft_store VALUES (15, "pencils", "office supplies", 3.99, 100, 5); 
+
+SELECT * FROM craft_store; 
+
+SELECT * FROM craft_store 
+ORDER BY price; 
+
+SELECT category, SUM (inventory) from craft_store GROUP BY category; 
